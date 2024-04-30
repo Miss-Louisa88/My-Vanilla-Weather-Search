@@ -5,28 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vanilla Weather Search</title>
+    <link rel="stylesheet" href="src/style.css" />
 </head>
 
 <body>
     <div class="weatherApp">
         <header>
             <form>
-                <input type="text" placeholder="Enter a city">
-                <input type="submit" value="search">
+                <input type="text" placeholder="Enter a city" required class="cityElement">
+                <input type="submit" value="search" class="searchButton">
             </form>
         </header>
         <main>
             <h1>Nairobi</h1>
-            <p class="weather-details">
-            <div>Monday 23: 30, broken clouds</div>
-            <br />
-            <span>Humidity: 20%, Wind: 3.5km/hr</span>
-            </p>
-            <div class="weatherElement">
-                <div id="icon">🌧️</div>
-                <div id="temperature"> 23</div>
-                <div id="unit">°C</div>
-            </div>
+            <div class="weatherDetails">
+
+                <p class="appDetails">
+                    <span id="dailyWeatherUpdate">Monday 23: 30, </span> <span>broken clouds</span>
+                    <br /> Humidity:
+                    <strong id="weatherUpdate">20%</strong>,Wind:
+                    <strong id="wind-speed">3.6km/h</strong>
+
+                <div class="weatherElement">
+                    <div class="icon" id="icon">🌧️</div>
+                    <div class="temperature" id="temp"> 23</div>
+                    <div id="unit" class="unit">°C</div>
+                </div>
         </main>
         <footer>
             <p>This project was coded by Louise Adera, and is open sourced on Github and hosted on Netlify</p>
