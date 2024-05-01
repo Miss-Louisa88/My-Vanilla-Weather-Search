@@ -65,6 +65,7 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+  margin-top: -15px;
 }
 .appDetails strong {
   color: #f65282;
@@ -76,4 +77,31 @@ footer {
   text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
+}
+.weatherElement {
+  display: flex;
+  position: relative;
+  bottom: 80px;
+}
+.icon {
+  display: inline;
+  font-size: 50px;
+  unicode-bidi: isolate;
+  width: 88px;
+  height: 88px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  position: relative;
+  top: 20px;
+}
+.temperature {
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
+  display: inline;
+}
+.unit {
+  margin-top: 6px;
+  font-size: 28px;
+  display: inline-block;
 }
