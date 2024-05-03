@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vanilla Weather Search</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 
 <body>
     <div class="weatherApp">
         <header>
-            <form>
-                <input type="text" placeholder="Enter a city" required class="cityElement">
+            <form id="city">
+                <input type="text" placeholder="Enter a city" required class="cityElement" autocomplete="off"
+                    autofocus="on" id="enterCity">
                 <input type="submit" value="search" class="searchButton">
             </form>
         </header>
