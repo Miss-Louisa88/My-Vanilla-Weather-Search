@@ -2,7 +2,6 @@ function searchCity(event) {
   event.preventDefault();
   let searchResult = document.querySelector("#enterCity");
   let cityElement = document.querySelector("h1");
-  console.log(cityElement);
   cityElement.innerHTML = searchResult.value;
 
   function displayCity(response) {
@@ -24,6 +23,7 @@ function searchCity(event) {
     console.log(date);
     timeElement.innerHTML = formatDate(date);
   }
+  ///Date API Integration
   function formatDate(date) {
     let minutes = date.getMinutes();
     let hours = date.getHours();
@@ -42,7 +42,7 @@ function searchCity(event) {
     }
     return `${day} ${hours}: ${minutes}`;
   }
-
+  ///API Integration
   let apiKey = "594o02104b870cb39413fdbd5t9a24d2";
   let city = `${searchResult.value}`;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -51,20 +51,3 @@ function searchCity(event) {
 }
 let form = document.querySelector("#city");
 form.addEventListener("submit", searchCity);
-
-///Date API Integration
-function createDate() {
-  let now = new Date();
-  let hour = now.getHours();
-  let minutes = now.getMinutes();
-  let day = days[now.getDay()];
-  let days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-}
